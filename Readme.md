@@ -1,6 +1,6 @@
 # Rock Paper Scissors Game
 
-![Game Screenshot](./screenshot.png) 
+![Game Screenshot](/screenshot/Screenshot.png) 
 
 A web-based implementation of the classic Rock Paper Scissors game, created as part of [The Odin Project](https://www.theodinproject.com/) Foundations course.
 
@@ -43,6 +43,8 @@ git clone https://github.com/your-username/rock-paper-scissors.git
 cd rock-paper-scissors
 open index.html
 ```
+
+Or Play online at https://saiamirthesh.github.io/Rock-Paper-Scissor/
 
 ## Code Structure
     
