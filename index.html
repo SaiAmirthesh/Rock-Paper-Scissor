@@ -3,16 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock-Paper-Scissor</title>
-    <script src="game.js" defer></script>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to the Game</h1>
-    <p>This is a simple HTML page with linked CSS and JavaScript files.</p>
-    <button id="startGame">Start Game</button>
-
-    <footer>
-        <p>&copy; 2023 My Game</p>
-    </footer>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        
+        <div class="scoreboard">
+            <div class="player-score">
+                <h2>Player</h2>
+                <p id="player-score">0</p>
+            </div>
+            <div class="computer-score">
+                <h2>Computer</h2>
+                <p id="computer-score">0</p>
+            </div>
+        </div>
+        
+        <div class="choices">
+            <button class="choice-btn" id="rock">✊</button>
+            <button class="choice-btn" id="paper">✋</button>
+            <button class="choice-btn" id="scissors">✌️</button>
+        </div>
+        
+        <div class="result" id="result">
+            Choose your weapon!
+        </div>
+        
+        <button class="reset-btn" id="reset">Reset Game</button>
+    </div>
+    
+    <script src="game.js"></script>
 </body>
 </html>
