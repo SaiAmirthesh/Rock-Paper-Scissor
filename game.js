@@ -1,19 +1,16 @@
-// DOM Elements
 const playerScoreEl = document.getElementById('player-score');
 const computerScoreEl = document.getElementById('computer-score');
 const resultEl = document.getElementById('result');
 const choiceBtns = document.querySelectorAll('.choice-btn');
 const resetBtn = document.getElementById('reset');
 
-// Game variables
 let playerScore = 0;
 let computerScore = 0;
-const winningScore = 5; // Game ends when someone reaches this score
+const winningScore = 5; 
 
-// Event listeners
+
 choiceBtns.forEach(button => {
     button.addEventListener('click', () => {
-        // Disable buttons if game is over
         if (playerScore === winningScore || computerScore === winningScore) {
             return;
         }
@@ -25,9 +22,9 @@ choiceBtns.forEach(button => {
 
 resetBtn.addEventListener('click', resetGame);
 
-// Game functions
+
 function playRound(playerChoice) {
-    // Add animation to the selected button
+    
     const selectedBtn = document.getElementById(playerChoice);
     selectedBtn.classList.add('choice-selected');
     setTimeout(() => {
@@ -40,7 +37,6 @@ function playRound(playerChoice) {
     updateScore(winner);
     displayResult(winner, playerChoice, computerChoice);
     
-    // Check if game is over
     if (playerScore === winningScore || computerScore === winningScore) {
         endGame();
     }
@@ -103,13 +99,12 @@ function endGame() {
         resultEl.style.color = '#e74c3c';
     }
     
-    // Disable choice buttons temporarily
+    
     choiceBtns.forEach(btn => {
         btn.disabled = true;
         btn.style.opacity = '0.6';
     });
     
-    // Reset after 3 seconds
     setTimeout(resetGame, 3000);
 }
 
@@ -120,8 +115,7 @@ function resetGame() {
     computerScoreEl.textContent = '0';
     resultEl.textContent = 'Choose your weapon!';
     resultEl.style.color = '#333';
-    
-    // Re-enable choice buttons
+  
     choiceBtns.forEach(btn => {
         btn.disabled = false;
         btn.style.opacity = '1';
